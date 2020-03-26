@@ -1,0 +1,16 @@
+PODS:
+  - kmp_lib (1.0)
+
+DEPENDENCIES:
+  - kmp_lib (from `../kmp_lib`)
+
+EXTERNAL SOURCES:
+  kmp_lib:
+    :path: "../kmp_lib"
+
+SPEC CHECKSUMS:
+  kmp_lib: ba6b61cbd0499e19d2968d9877ca9b470c2d20ef
+
+PODFILE CHECKSUM: 7b1d430709b3cfefb78306169de464f4c7419ad6
+
+COCOAPODS: 1.9.1

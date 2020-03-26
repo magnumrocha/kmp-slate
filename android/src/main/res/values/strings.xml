@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name" translatable="false">KMP-Slate</string>
+
+    <string name="loading_title">Loading&#8230;</string>
+
+    <string name="error_title">Oh No!</string>
+    <string name="error_generic_message">Something went wrong! Please Retry!</string>
+
+    <string name="welcome_title">Welcome</string>
+
+    <string name="developer_title">Developer Info</string>
+    <string name="developer_name" translatable="false">Magnum Rocha</string>
+    <string name="developer_birthday" translatable="false">20 Dec 1987</string>
+</resources>

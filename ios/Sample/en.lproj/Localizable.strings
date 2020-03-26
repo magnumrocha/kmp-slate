@@ -1,0 +1,12 @@
+/* 
+  A Sample Project
+
+  Created by Magnum Rocha on 25/03/2020.
+*/
+
+"welcome" = "Welcome";
+
+"start_action" = "Start";
+"next_action" = "Next";
+
+"home" = "This is the Home View";

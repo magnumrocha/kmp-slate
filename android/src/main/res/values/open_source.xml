@@ -1,0 +1,6 @@
+<resources>
+    <string name="open_source_header">Open Source libraries used</string>
+
+    <string name="dagger_header" translatable="false">Dagger (Dependency Injection)</string>
+    <string name="dagger_link" translatable="false">https://dagger.dev/android</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#29B6F6</color>
+    <color name="colorPrimaryDark">#0086C3</color>
+    <color name="colorPrimaryLight">#73E8FF</color>
+    <color name="colorAccent">#03A9F4</color>
+    <color name="people_details_retry_background">#70D81B60</color>
+</resources>

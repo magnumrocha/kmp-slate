@@ -1,0 +1,48 @@
+if (project.ext.isMacosHost) {
+
+// import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
+// import org.jetbrains.kotlin.gradle.plugin.mpp.Framework
+
+kotlin {
+    // add a platform switching to have an IDE support
+    // final def buildForDevice = project.findProperty('kotlin.native.cocoapods.target') == 'ios_arm'
+    // final def buildForDevice = project.findProperty('device')?.toBoolean() ?: false
+
+    iosX64()   // for iOS Simulator
+    iosArm32() // for iOS armv7 and iOS armv7s devices
+    iosArm64() // for iOS arm64 devices
+
+    sourceSets {
+        iosMain {
+            dependencies {
+                implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:$serialization_version"
+                implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core-native:$coroutines_version"
+            }
+        }
+
+        iosTest {
+        }
+
+        configure([targets.iosX64, targets.iosArm32, targets.iosArm64]) {
+            compilations.main.source(sourceSets.iosMain)
+            compilations.test.source(sourceSets.iosTest)
+        }
+    }
+
+    cocoapods {
+        // configure fields required by CocoaPods
+        summary = 'Kotlin Library module for Slate project'
+        homepage = 'Link to a Kotlin/Native module homepage'
+
+        // the name of the produced framework can be changed.
+        // the name of the Gradle project is used here by default.
+        frameworkName = "SlateKt" // NOTE: The build for iOS Simulator works, but for iOS Devices not...
+
+        // Configure a dependency on AFNetworking.
+        // The CocoaPods version notation is supported.
+        // The dependency will be added to all macOS and iOS targets.
+        //pod('AFNetworking', '~> 3.2.0')
+    }
+}
+
+}

@@ -1,0 +1,49 @@
+import org.jetbrains.kotlin.konan.target.HostManager
+
+apply from: rootProject.file("gradle/experimental.gradle")
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
+
+        classpath 'io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.0.1'
+
+        classpath 'com.android.tools.build:gradle:3.6.1'
+
+        //classpath "com.squareup.sqldelight:gradle-plugin:$sqldelight_version"
+    }
+}
+
+allprojects {
+    // the only place where HostManager could be instantiated
+    project.ext.hostManager = new HostManager()
+
+    repositories {
+        maven { url "https://kotlin.bintray.com/kotlinx" }
+        maven { url "https://dl.bintray.com/kotlin/ktor" }
+    }
+
+    // Workaround for https://youtrack.jetbrains.com/issue/KT-36721.
+    // Put this snippet into your root buildscript.
+    pluginManager.withPlugin("kotlin-multiplatform") {
+        def uniqueName = "${project.group}.${project.name}".toString()
+
+        project.kotlin.targets.withType(org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget.class) {
+            compilations["main"].kotlinOptions.freeCompilerArgs += ["-module-name", uniqueName]
+        }
+    }
+}
+
+subprojects {
+    version = project_version
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,25 @@
+/* 
+  A Sample Project
+
+  Created by Magnum Rocha on 19/03/2020.
+  Copyright © 2020 Prozis. All rights reserved.
+*/
+
+"welcome" = "Bem vindo";
+"welcome_message" = "Um novo jeito de controlar suas finanças";
+"all_done" = "Tudo certo, Vamos começar!";
+
+"start_action" = "Iniciar";
+"next_action" = "Próximo";
+
+"app_overview_page_1" = "App Visão Geral - Página 1";
+"app_overview_page_2" = "App Visão Geral - Página 2";
+
+"user_setup_title" = "Definição de Usuário";
+"username" = "informe o seu name";
+
+"list_and_budget_setup_title" = "Definição de Lista e Orçamentos";
+
+"home" = "Esta é a Home";
+
+"main_view" = "Esta é a view principal";
