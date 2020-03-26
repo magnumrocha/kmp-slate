@@ -1,3 +1,3 @@
-# Prozis X SDK - Kotlin Multiplatform
+# KMP Slate - Kotlin Multiplatform
 
-A version of Prozis X SDK using Kotlin Multiplatform approach.
+A pet project to test Kotlin Multiplatform Project (https://www.jetbrains.com/lp/mobilecrossplatform/).
