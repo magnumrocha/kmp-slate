@@ -36,7 +36,7 @@ kotlin {
 
         // the name of the produced framework can be changed.
         // the name of the Gradle project is used here by default.
-        frameworkName = "SlateKt" // NOTE: The build for iOS Simulator works, but for iOS Devices not...
+        frameworkName = 'SlateKt'
 
         // Configure a dependency on AFNetworking.
         // The CocoaPods version notation is supported.

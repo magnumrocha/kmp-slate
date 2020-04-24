@@ -4,7 +4,7 @@ use_frameworks!
 platform :ios, '9.0'
 
 target 'Sample' do
-  pod 'kmp_lib', :path => '../kmp_lib'
+  pod 'SlateKt', :path => '../kmp_lib'
 
   target 'SampleTests' do
     inherit! :search_paths

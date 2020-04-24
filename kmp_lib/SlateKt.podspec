@@ -1,5 +1,5 @@
 Pod::Spec.new do |spec|
-    spec.name                     = 'kmp_lib'
+    spec.name                     = 'SlateKt'
     spec.version                  = '1.0'
     spec.homepage                 = 'Link to a Kotlin/Native module homepage'
     spec.source                   = { :git => "Not Published", :tag => "Cocoapods/#{spec.name}/#{spec.version}" }
