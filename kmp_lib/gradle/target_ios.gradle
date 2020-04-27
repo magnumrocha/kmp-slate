@@ -36,7 +36,8 @@ kotlin {
 
         // the name of the produced framework can be changed.
         // the name of the Gradle project is used here by default.
-        frameworkName = 'SlateKt'
+        //frameworkName = 'SlateKt' -> disabled due a bug with fat frameworks (multiple device targets) in the project.
+        // related Issue: https://youtrack.jetbrains.com/issue/KT-31542
 
         // Configure a dependency on AFNetworking.
         // The CocoaPods version notation is supported.
