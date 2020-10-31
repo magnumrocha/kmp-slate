@@ -31,7 +31,7 @@ kotlin {
             dependencies {
                 implementation kotlin('stdlib-jdk8')
 
-                implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$serialization_version"
+                implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:$serialization_version"
                 implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
             }
         }
@@ -40,7 +40,7 @@ kotlin {
                 implementation kotlin('test')
                 implementation kotlin('test-junit')
 
-                implementation 'junit:junit:4.13'
+                implementation 'junit:junit:4.13.1'
             }
         }
     }
