@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
     spec.summary                  = 'Kotlin Library module for Slate project'
 
     spec.static_framework         = true
-    spec.vendored_frameworks      = "build/cocoapods/framework/kmp_lib.framework"
+    spec.vendored_frameworks      = "build/cocoapods/framework/SlateKt.framework"
     spec.libraries                = "c++"
     spec.module_name              = "#{spec.name}_umbrella"
 

@@ -5,7 +5,7 @@
 //
 
 import Foundation
-import kmp_lib
+import SlateKt
 
 class HomeViewModel {
 
